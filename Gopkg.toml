@@ -27,6 +27,7 @@
 required = [
   "k8s.io/code-generator/cmd/deepcopy-gen", # for go generate
   "sigs.k8s.io/controller-tools/cmd/controller-gen", # for crd/rbac generation
+  "sigs.k8s.io/cluster-api"
 ]
 
 [[constraint]]
@@ -57,13 +58,14 @@ required = [
   name = "k8s.io/klog"
   version = "0.1.0"
 
-[[constraint]]
-  name = "sigs.k8s.io/cluster-api"
-  version = "0.0.0-alpha.4"
+#[[constraint]]
+#  name = "sigs.k8s.io/cluster-api"
+#  version = "0.0.0-alpha.4"
+#  version = "0.2.0"
 
 [[constraint]]
   name = "sigs.k8s.io/controller-runtime"
-  version = "0.1.7"
+  branch="release-0.2"
 
 [[constraint]]
   name = "sigs.k8s.io/yaml"
